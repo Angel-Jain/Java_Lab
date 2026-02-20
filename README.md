@@ -1,6 +1,6 @@
-[Program-1 WAP for calculator ]#Ass-1
+[Program-1 WAP for calculator ](#Ass-1)
 
-[Program-2 WAP demonstrating loops]#Ass-2 
+[Program-2 WAP demonstrating loops](#Ass-2) 
 
 
 
