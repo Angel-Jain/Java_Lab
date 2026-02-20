@@ -43,3 +43,24 @@ public class Code {
 }
 ```
 ![WhatsApp Image 2026-02-20 at 12 26 51 PM](https://github.com/user-attachments/assets/10ec8473-9bec-4d30-9a0f-21301414c030)
+```
+public class forloop {
+    public static void main(String[] args)
+    {
+    int n = 5;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println("\n");
+    }
+    
+}
+}
+```
+
+<img width="332" height="190" alt="image" src="https://github.com/user-attachments/assets/842c43de-185c-4bec-ba1f-5c1ea9da39dc" />
+
+
