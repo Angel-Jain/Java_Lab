@@ -1,3 +1,10 @@
+[Program-1 WAP for calculator ]#Ass-1
+
+[Program-2 WAP demonstrating loops]#Ass-2 
+
+
+
+## Ass-1
 ```
 public class Code {
     public static void main(String[] args)
@@ -43,6 +50,8 @@ public class Code {
 }
 ```
 ![WhatsApp Image 2026-02-20 at 12 26 51 PM](https://github.com/user-attachments/assets/10ec8473-9bec-4d30-9a0f-21301414c030)
+
+## Ass-2
 ```
 public class forloop {
     public static void main(String[] args)
