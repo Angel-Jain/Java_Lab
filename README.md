@@ -2,7 +2,7 @@
 
 [Program-2 WAP demonstrating loops](#Ass-2) 
 
-
+[Program-3 WAP to create Calculator using objects](#Ass-3)
 
 ## Ass-1
 ```
@@ -72,4 +72,51 @@ public class forloop {
 
 <img width="332" height="190" alt="image" src="https://github.com/user-attachments/assets/842c43de-185c-4bec-ba1f-5c1ea9da39dc" />
 
+## Ass-3
+```
+class Calc
+{
+    int num1;
+    int num2;
+     public Calc(int a, int b)
+     {
+           num1 = a;
+           num2 = b;
+     }
+     public int add()
+     {
+        return num1+num2;
+     }
+    
+    public int subtract() 
+     {
+        return num1-num2;
+     }
+      
+     public int multiply()
+     {
+        return num1*num2;
+     }
+
+     public int division()
+     {
+        return num1/num2;
+     }
+   }
+
+public class Calculator1
+{
+   public static void main(String[] args)
+   {
+       Calc c = new Calc(10,20);
+         System.out.println("Addition of two numbers : "+c.add());
+         System.out.println("Addition of two numbers : "+c.subtract());
+         System.out.println("Addition of two numbers : "+c.multiply());
+         System.out.println("Addition of two numbers : "+c.division());  
+      
+   }
+   
+}
+
+```
 
