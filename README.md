@@ -4,6 +4,12 @@
 
 [Program-3 WAP to create Calculator using objects](#Ass-3)
 
+[Program-4 Wap for the addition of two distances where each distaance is given in m,cm,and mm using object and classes](#Ass-4)
+
+[Program-5 Wap for addition of two time where each time is given by hours and mins using object and classes](#Ass-5)
+
+[Program-6 Wap using object and classes to do the reverse of 1d array](#Ass-6)
+
 ## Ass-1
 ```
 public class Code {
@@ -119,4 +125,147 @@ public class Calculator1
 }
 
 ```
+<img width="270" height="106" alt="image" src="https://github.com/user-attachments/assets/3ccb4aa6-371b-47cf-b861-8beba462958c" />
+
+## Ass-4
+
+```
+class Distances
+{
+    int mm;
+    int cm;
+    int m;
+    public Distances(int a,int b,int c)
+    {
+        mm = a;
+        cm = b;
+        m = c;
+    }
+    public void conversion()
+    {
+        while(mm>=10)
+        {
+            mm = mm-10;
+            cm = cm+1;
+
+        }
+        while(cm>=100)
+        {
+            cm = cm-100;
+            m = m+1;
+        }
+
+    }
+    public void display()
+    {
+        System.out.println("m :"+m + "cm :"+cm + "mm: "+mm);
+    }
+}
+
+public class Distance {
+    public static void main(String zrgs[])
+    {
+       Distances D1 = new Distances(22,224,76);
+       D1.conversion();
+       D1.display();
+    }
+}
+
+```
+<img width="375" height="59" alt="image" src="https://github.com/user-attachments/assets/0c6969d5-d486-4800-a0f2-b291e5ffb3ab" />
+
+## Ass-5
+
+```
+class Timee
+{
+    int hr;
+    int min;
+    int sec;
+    public Timee(int a ,int b,int c)
+    {
+        hr = a;
+        min = b;
+        sec = c;
+    }
+    public void conversion()
+    {
+        while(sec>=60)
+        {
+            sec = sec-60;
+            min = min+1;
+        }
+        while(min>=60)
+        {
+            min = min-60;
+            hr = hr+1;
+        }
+
+    }
+    public void display()
+    {
+        System.out.println("hr :"+hr  + "min :" + min + "sec :"  + sec);
+    }
+}
+
+public class Time {
+    public static void main(String args[])
+    {
+          Timee T = new Timee(12,70,80);
+          T.conversion();
+          T.display();
+    }
+}
+
+```
+<img width="340" height="59" alt="image" src="https://github.com/user-attachments/assets/5d09e3f2-b35f-4dca-a217-f137baf35b63" />
+
+## Ass-6
+
+```
+class oneD_Array
+{
+   int [] array;
+   oneD_Array(int [] arr)
+   {
+      array = arr;
+   }
+   public void reverse()
+   {
+      int low = 0;
+      int high = array.length - 1;
+      while(low<=high)
+      {
+        int temp = array[low];
+        array[low]=array[high];
+        array[high]=temp;
+        low++;
+        high--;
+      }
+   }
+   public void display()
+   {
+     System.out.println("Reverse of the array is :- ");
+     for(int i=0;i<array.length;i++)
+     {
+        System.out.print(array[i] + " ");
+     }
+   }
+
+}
+
+public class Reverse_1D 
+{
+    public static void main(String [] args)
+    {
+       oneD_Array A1 = new oneD_Array(new int[]{1,2,3,4,5,6});
+       A1.reverse();
+       A1.display();
+    }
+    
+}
+
+```
+<img width="272" height="51" alt="Screenshot 2026-03-19 231125" src="https://github.com/user-attachments/assets/7c0c23f1-d8d4-4723-a50b-80f9b7f233ae" />
+
 
