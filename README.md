@@ -16,15 +16,15 @@
 
 [Program-9 Write a class with multiple methods to perform matrix operations(Transpose, Addition, sum of rows, sum of columns, sum of diagonals)](#Ass-9)
 
-[Program -10 Wap to demonsrate all 3 types of inheritance with minimum code](#assi-10)
+[Program -10 Wap to demonsrate all 3 types of inheritance with minimum code](#Assi-10)
 
-[Program -11 WAP using three classes to print 1-100 with and without thread and analyse thread and analyse the output and repeat the same program using runnable interface](#assi-11)
+[Program -11 WAP using three classes to print 1-100 with and without thread and analyse thread and analyse the output and repeat the same program using runnable interface](#Assi-11)
 
-[Program -12 Using the concept of multithreading the output of all three threads must be synchronised (use join method)](#assi-12)
+[Program -12 Using the concept of multithreading the output of all three threads must be synchronised (use join method)](#Assi-12)
 
-[Program -13 Addition of 2 numbers using swing](#assi-13)
+[Program -13 Addition of 2 numbers using swing](#Assi-13)
 
-[Program -14 Make a registration form with 10 elements and send the data into database (use jdbc connectivity) ](#assi-14)
+[Program -14 Make a registration form with 10 elements and send the data into database (use jdbc connectivity) ](#Assi-14)
 
 
 
@@ -953,6 +953,406 @@ public class RegistrationForm extends JFrame implements ActionListener {
 <img width="1001" height="422" alt="image" src="https://github.com/user-attachments/assets/43eb457c-5903-41e8-9952-580823434a05" />
 
 <img width="384" height="381" alt="image" src="https://github.com/user-attachments/assets/7b4db455-642d-43ac-9954-4414a29ddcfb" />
+
+##Ass-15
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ShapesFrame extends JFrame implements ActionListener {
+    String shape = "";
+
+    public ShapesFrame() {
+        setTitle("Shapes Frame");
+        setSize(500, 500);
+        setLayout(new FlowLayout());
+
+        String[] btns = {"Circle", "Oval", "Rectangle", "Square", "Line",
+                "Triangle", "Arc", "RoundRect", "3DRect", "Clear"};
+
+        for (String b : btns) {
+            JButton button = new JButton(b);
+            button.addActionListener(this);
+            add(button);
+        }
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        shape = e.getActionCommand();
+        repaint();
+    }
+
+    public void paint(Graphics g) {
+        super.paint(g);
+
+        switch (shape) {
+            case "Circle": g.drawOval(200, 150, 100, 100); break;
+            case "Oval": g.drawOval(200, 150, 150, 100); break;
+            case "Rectangle": g.drawRect(200, 150, 150, 100); break;
+            case "Square": g.drawRect(200, 150, 100, 100); break;
+            case "Line": g.drawLine(200, 150, 350, 250); break;
+            case "Triangle":
+                int x[] = {200, 250, 300};
+                int y[] = {250, 150, 250};
+                g.drawPolygon(x, y, 3);
+                break;
+            case "Arc": g.drawArc(200, 150, 100, 100, 0, 180); break;
+            case "RoundRect": g.drawRoundRect(200,150,150,100,30,30); break;
+            case "3DRect": g.draw3DRect(200,150,150,100,true); break;
+            case "Clear": repaint(); break;
+        }
+    }
+
+    public static void main(String[] args) {
+        new ShapesFrame();
+    }
+}
+```
+<img width="614" height="609" alt="Screenshot 2026-04-23 102600" src="https://github.com/user-attachments/assets/766acc68-c019-4cd7-a810-52f81f2ce353" />
+<img width="604" height="620" alt="Screenshot 2026-04-23 102609" src="https://github.com/user-attachments/assets/c1431113-2cac-4c03-ac6e-560386927ff7" />
+
+##Ass-16
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class PaintApp extends JFrame {
+    int x, y;
+    Color color = Color.BLACK;
+    int width = 5;
+
+    public PaintApp() {
+        setTitle("Paint App");
+        setSize(600, 500);
+
+        addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseDragged(MouseEvent e) {
+                Graphics g = getGraphics();
+                g.setColor(color);
+                g.fillOval(e.getX(), e.getY(), width, width);
+            }
+        });
+
+        JButton red = new JButton("Red");
+        JButton blue = new JButton("Blue");
+
+        red.addActionListener(e -> color = Color.RED);
+        blue.addActionListener(e -> color = Color.BLUE);
+
+        add(red, BorderLayout.NORTH);
+        add(blue, BorderLayout.SOUTH);
+
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new PaintApp();
+    }
+}
+
+```
+<img width="738" height="608" alt="image" src="https://github.com/user-attachments/assets/54e0cef8-38f8-47c4-9ac5-687cdd7f897d" />
+
+##Ass-17
+
+Package: mypack
+
+class A
+```
+package mypack;
+
+public class A { public void show() { System.out.println("Class A"); } }
+```
+class B
+```
+package mypack;
+
+public class B { public void show() { System.out.println("Class B"); } }
+```
+class C
+```
+package mypack;
+
+public class C { public void show() { System.out.println("Class C"); } }
+
+```
+class D
+```
+package mypack;
+
+public class D { public void show() { System.out.println("Class D"); } }
+```
+class E
+```
+package mypack;
+
+public class E { public void show() { System.out.println("Class E"); } }
+```
+Main class
+```
+import mypack.*;
+
+public class TestPackage {
+    public static void main(String[] args) {
+        new A().show();
+        new B().show();
+        new C().show();
+        new D().show();
+        new E().show();
+    }
+}
+```
+
+
+##Ass-18
+
+```
+public class ExceptionDemo {
+    public static void main(String[] args) {
+
+        // Array Exception
+        try {
+            int arr[] = new int[5];
+            arr[10] = 50;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Index Out Of Bounds!");
+        }
+
+        // Arithmetic Exception
+        try {
+            int x = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero!");
+        }
+    }
+}
+```
+<img width="459" height="49" alt="image" src="https://github.com/user-attachments/assets/73794468-1b79-4ab8-bba4-6b081a35b726" />
+
+##Ass-19
+
+```
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String msg) {
+        super(msg);
+    }
+}
+
+public class AgeCheck {
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18)
+            throw new InvalidAgeException("Not eligible!");
+        else
+            System.out.println("Eligible");
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(15);
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+```
+<img width="593" height="73" alt="image" src="https://github.com/user-attachments/assets/23470d80-cd10-4768-8c10-7c1de6bd20a8" />
+
+##Ass-20
+
+```
+abstract class Animal {
+    abstract void sound();
+
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+interface Pet {
+    void play();
+}
+
+class Dog extends Animal implements Pet {
+    void sound() {
+        System.out.println("Barking...");
+    }
+
+    public void play() {
+        System.out.println("Playing...");
+    }
+}
+
+public class TestInheritance {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+        d.eat();
+        d.play();
+    }
+}
+
+```
+<img width="617" height="69" alt="image" src="https://github.com/user-attachments/assets/77ba4dd0-d732-4afb-aeb6-87877a1a4701" />
+
+##Ass-21
+
+Character By Character
+```
+import java.io.*;
+
+public class CharFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("source.txt");
+            FileWriter fw = new FileWriter("dest_char.txt");
+
+            int ch;
+
+            while ((ch = fr.read()) != -1) {
+                fw.write(ch);
+            }
+
+            fr.close();
+            fw.close();
+
+            System.out.println("File copied using character stream");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+
+Byte By Byte
+
+```
+import java.io.*;
+
+public class ByteFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream("source.txt");
+            FileOutputStream fos = new FileOutputStream("dest_byte.txt");
+
+            int b;
+
+            while ((b = fis.read()) != -1) {
+                fos.write(b);
+            }
+
+            fis.close();
+            fos.close();
+
+            System.out.println("File copied using byte stream");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+```
+
+##Ass-22
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Calculator extends JFrame implements ActionListener {
+
+    JTextField tf;
+    String operator = "";
+    double num1 = 0, num2 = 0, result = 0;
+
+    public Calculator() {
+        setTitle("Swing Calculator");
+        setSize(300, 400);
+        setLayout(new BorderLayout());
+
+        tf = new JTextField();
+        tf.setFont(new Font("Arial", Font.BOLD, 20));
+        tf.setHorizontalAlignment(JTextField.RIGHT);
+        add(tf, BorderLayout.NORTH);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(4, 4, 10, 10));
+
+        String buttons[] = {
+                "7", "8", "9", "/",
+                "4", "5", "6", "*",
+                "1", "2", "3", "-",
+                "0", "C", "=", "+"
+        };
+
+        for (String b : buttons) {
+            JButton btn = new JButton(b);
+            btn.setFont(new Font("Arial", Font.BOLD, 16));
+            btn.addActionListener(this);
+            panel.add(btn);
+        }
+
+        add(panel, BorderLayout.CENTER);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        String input = e.getActionCommand();
+
+        if (input.matches("[0-9]")) {
+            tf.setText(tf.getText() + input);
+        } else if (input.matches("[+\\-*/]")) {
+            num1 = Double.parseDouble(tf.getText());
+            operator = input;
+            tf.setText("");
+        } else if (input.equals("=")) {
+            num2 = Double.parseDouble(tf.getText());
+
+            switch (operator) {
+                case "+": result = num1 + num2; break;
+                case "-": result = num1 - num2; break;
+                case "*": result = num1 * num2; break;
+                case "/": result = num1 / num2; break;
+            }
+
+            tf.setText("" + result);
+        } else if (input.equals("C")) {
+            tf.setText("");
+        }
+    }
+
+    public static void main(String[] args) {
+        new Calculator();
+    }
+}
+
+```
+<img width="356" height="483" alt="Screenshot 2026-04-23 104848" src="https://github.com/user-attachments/assets/fba9f9b0-f695-424f-b003-99d2c408b08c" />
+<img width="355" height="487" alt="Screenshot 2026-04-23 104907" src="https://github.com/user-attachments/assets/24d0ecfe-afe3-42f2-bf7e-53e60f43513a" />
+<img width="359" height="490" alt="Screenshot 2026-04-23 104914" src="https://github.com/user-attachments/assets/7d84c9e0-d8f8-4d6a-9bcd-7c4d957e527f" />
+<img width="355" height="487" alt="Screenshot 2026-04-23 104921" src="https://github.com/user-attachments/assets/f78bf439-3e44-45bb-b5b4-58523827ac22" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
