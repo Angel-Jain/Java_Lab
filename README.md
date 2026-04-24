@@ -16,33 +16,33 @@
 
 [Program-9 Write a class with multiple methods to perform matrix operations(Transpose, Addition, sum of rows, sum of columns, sum of diagonals)](#Ass-9)
 
-[Program -10 Wap to demonsrate all 3 types of inheritance with minimum code](#Assi-10)
+[Program -10 Wap to demonsrate all 3 types of inheritance with minimum code](#Ass-10)
 
-[Program -11 WAP using three classes to print 1-100 with and without thread and analyse thread and analyse the output and repeat the same program using runnable interface](#Assi-11)
+[Program -11 WAP using three classes to print 1-100 with and without thread and analyse thread and analyse the output and repeat the same program using runnable interface](#Ass-11)
 
-[Program -12 Using the concept of multithreading the output of all three threads must be synchronised (use join method)](#Assi-12)
+[Program -12 Using the concept of multithreading the output of all three threads must be synchronised (use join method)](#Ass-12)
 
-[Program -13 Addition of 2 numbers using swing](#Assi-13)
+[Program -13 Addition of 2 numbers using swing](#Ass-13)
 
-[Program -14 Make a registration form with 10 elements and send the data into database (use jdbc connectivity)](#Assi-14)
+[Program -14 Make a registration form with 10 elements and send the data into database (use jdbc connectivity)](#Ass-14)
 
-[Program -15 Create one jframe apply 10 buttons on that after clicking on each button a new structure is created.(Circle, oval rectangle, etc ....)](#Assi-15)
+[Program -15 Create one jframe apply 10 buttons on that after clicking on each button a new structure is created.(Circle, oval rectangle, etc ....)](#Ass-15)
 
-[Program-16 Just using mouse Event create a frame like paint brush with selection of colour and width](#Assi-16)
+[Program-16 Just using mouse Event create a frame like paint brush with selection of colour and width](#Ass-16)
 
-[Program-17 Create a package of any 5 classes of your choice and import it.](#Assi-17)
+[Program-17 Create a package of any 5 classes of your choice and import it.](#Ass-17)
 
-[Program-18 Create one small array of size 5 apply array out of bounds exception using try catch give a proper message in catch and demonstrate the exception exactly in the same fashion demonstrate arithmetic exception .](#Assi-18)
+[Program-18 Create one small array of size 5 apply array out of bounds exception using try catch give a proper message in catch and demonstrate the exception exactly in the same fashion demonstrate arithmetic exception .](#Ass-18)
 
-[Program-19 Create one package and sub package  import and test it](#Assi-19)
+[Program-19 Create one package and sub package  import and test it](#Ass-19)
 
-[Program--20 To test the range of age of one student.write a program using user defined exception](#Assi-20)
+[Program--20 To test the range of age of one student.write a program using user defined exception](#Ass-20)
 
-[Program-21 Inheritance Programs, using interface and abstract classes](#Assi-21)
+[Program-21 Inheritance Programs, using interface and abstract classes](#Ass-21)
 
-[Program-22  File Handling Programs (given in the PPT)](#Assi-22)
+[Program-22  File Handling Programs (given in the PPT)](#Ass-22)
 
-[Program-23  Make one calculator in swing](#Assi-23)
+[Program-23  Make one calculator in swing](#Ass-23)
 
 
 
