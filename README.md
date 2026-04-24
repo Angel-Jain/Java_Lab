@@ -24,7 +24,27 @@
 
 [Program -13 Addition of 2 numbers using swing](#Assi-13)
 
-[Program -14 Make a registration form with 10 elements and send the data into database (use jdbc connectivity) ](#Assi-14)
+[Program -14 Make a registration form with 10 elements and send the data into database (use jdbc connectivity)](#Assi-14)
+
+[Program -15 Create one jframe apply 10 buttons on that after clicking on each button a new structure is created.(Circle, oval rectangle, etc ....)](#Assi-15)
+
+[Program-16 Just using mouse Event create a frame like paint brush with selection of colour and width](#Assi-16)
+
+[Program-17 Create a package of any 5 classes of your choice and import it.](#Assi-17)
+
+[Program-18 Create one small array of size 5 apply array out of bounds exception using try catch give a proper message in catch and demonstrate the exception exactly in the same fashion demonstrate arithmetic exception .](#Assi-18)
+
+[Program-19 Create one package and sub package  import and test it](#Assi-19)
+
+[Program--20 To test the range of age of one student.write a program using user defined exception](#Assi-20)
+
+[Program-21 Inheritance Programs, using interface and abstract classes](#Assi-21)
+
+[Program-22  File Handling Programs (given in the PPT)](#Assi-22)
+
+[Program-23  Make one calculator in swing](#Assi-23)
+
+
 
 
 
@@ -1065,51 +1085,71 @@ public class PaintApp extends JFrame {
 
 Package: mypack
 
-class A
+class Addition
 ```
 package mypack;
 
-public class A { public void show() { System.out.println("Class A"); } }
+public class Addition {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
 ```
 class B
 ```
 package mypack;
 
-public class B { public void show() { System.out.println("Class B"); } }
+public class Subtraction {
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+}
 ```
 class C
 ```
 package mypack;
 
-public class C { public void show() { System.out.println("Class C"); } }
-
+public class Multiplication {
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
 ```
 class D
 ```
 package mypack;
 
-public class D { public void show() { System.out.println("Class D"); } }
-```
-class E
-```
-package mypack;
-
-public class E { public void show() { System.out.println("Class E"); } }
-```
-Main class
-```
-import mypack.*;
-
-public class TestPackage {
-    public static void main(String[] args) {
-        new A().show();
-        new B().show();
-        new C().show();
-        new D().show();
-        new E().show();
+public class Division {
+    public int divide(int a, int b) {
+        return a / b;
     }
 }
 ```
+Main class
+```
+import mypack.Addition;
+import mypack.Subtraction;
+import mypack.Multiplication;
+import mypack.Division;
+import mypack.Message;
+
+public class TestPackage {
+    public static void main(String[] args) {
+        Addition a = new Addition();
+        Subtraction s = new Subtraction();
+        Multiplication m = new Multiplication();
+        Division d = new Division();
+        Message msg = new Message();
+
+        System.out.println("Addition = " + a.add(20, 10));
+        System.out.println("Subtraction = " + s.subtract(20, 10));
+        System.out.println("Multiplication = " + m.multiply(20, 10));
+        System.out.println("Division = " + d.divide(20, 10));
+        msg.showMessage();
+    }
+}
+```
+<img width="1080" height="256" alt="image" src="https://github.com/user-attachments/assets/39cf581f-b697-475b-a0a0-301c5b38725c" />
 
 
 ##Ass-18
@@ -1137,7 +1177,44 @@ public class ExceptionDemo {
 ```
 <img width="459" height="49" alt="image" src="https://github.com/user-attachments/assets/73794468-1b79-4ab8-bba4-6b081a35b726" />
 
+
 ##Ass-19
+
+```
+// in package folder
+package college;
+
+public class Student {
+    public void showStudent() {
+        System.out.println("This is Student class from main package.");
+    }
+}
+//  in info folder
+package college.info;
+
+public class Address {
+    public void showAddress() {
+        System.out.println("This is Address class from sub-package.");
+    }
+}
+// in java lab folder
+import college.Student;
+import college.info.Address;
+
+public class TestSubPackage {
+    public static void main(String[] args) {
+        Student s = new Student();
+        Address a = new Address();
+
+        s.showStudent();
+        a.showAddress();
+    }
+}
+
+```
+<img width="437" height="50" alt="image" src="https://github.com/user-attachments/assets/fe559290-7d6a-42e4-ac36-b0efdee42cfb" />
+
+##Ass-20
 
 ```
 class InvalidAgeException extends Exception {
@@ -1166,7 +1243,7 @@ public class AgeCheck {
 ```
 <img width="593" height="73" alt="image" src="https://github.com/user-attachments/assets/23470d80-cd10-4768-8c10-7c1de6bd20a8" />
 
-##Ass-20
+##Ass-21
 
 ```
 abstract class Animal {
@@ -1203,7 +1280,7 @@ public class TestInheritance {
 ```
 <img width="617" height="69" alt="image" src="https://github.com/user-attachments/assets/77ba4dd0-d732-4afb-aeb6-87877a1a4701" />
 
-##Ass-21
+##Ass-22
 
 Character By Character
 ```
@@ -1231,6 +1308,8 @@ public class CharFileCopy {
     }
 }
 ```
+<img width="952" height="39" alt="image" src="https://github.com/user-attachments/assets/de038ad9-a5a4-4589-9f7e-1fbf9f00d53b" />
+
 
 Byte By Byte
 
@@ -1252,16 +1331,19 @@ public class ByteFileCopy {
             fis.close();
             fos.close();
 
-            System.out.println("File copied using byte stream");
+            System.out.println("Hello Byte File");
         } catch (Exception e) {
             System.out.println(e);
         }
     }
 }
 
-```
 
-##Ass-22
+```
+<img width="555" height="52" alt="image" src="https://github.com/user-attachments/assets/8eab8960-13be-4434-8a87-027edc6ff547" />
+
+
+##Ass-23
 
 ```
 import javax.swing.*;
